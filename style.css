@@ -1,0 +1,152 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: grid;
+    height: 100vh;
+    width: 100%;
+    place-items: center;
+    background: #d7e1ec;
+}
+
+.container {
+    display: inline-flex;
+}
+
+.container .icon {
+    margin: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.container .icon span {
+    position: relative;
+    height: 60px;
+    width: 60px;
+    display: block;
+    text-align: center;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 2;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.container .icon span i {
+    font-size: 25px;
+    line-height: 60px;
+
+
+}
+
+.container .icon:hover span i {
+    color: #fff;
+}
+
+.container .icon .tooltip {
+    position: absolute;
+    top: 0px;
+    background: #fff;
+    color: #fff;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    font-size: 20px;
+    padding: 10px 18px;
+    border-radius: 25px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.container .icon:hover .tooltip {
+    opacity: 1;
+    pointer-events: auto;
+    top: -70px;
+}
+
+.container .icon .tooltip:before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    background-color: #fff;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.container .icon:hover .tooltip,
+.container .icon:hover span {
+    text-shadow: 0px -1px 0px rgb(0, 0, 0, 0.4);
+}
+
+.container .fb:hover .tooltip,
+.container .fb:hover span,
+.container .fb:hover .tooltip:before {
+    background: #385999;
+}
+
+.container .tw:hover .tooltip,
+.container .tw:hover span,
+.container .tw:hover .tooltip:before {
+    background: #46c1f6;
+}
+
+.container .wa:hover .tooltip,
+.container .wa:hover span,
+.container .wa:hover .tooltip:before {
+    background: #119a28;
+}
+
+.container .in:hover .tooltip,
+.container .in:hover span,
+.container .in:hover .tooltip:before {
+    background: #e1306c;
+}
+
+.container .yt:hover .tooltip,
+.container .yt:hover span,
+.container .yt:hover .tooltip:before {
+    background: #ff0000;
+}
+
+.container .gh:hover .tooltip,
+.container .gh:hover span,
+.container .gh:hover .tooltip:before {
+    background: #333;
+}
+
+.container .wa span i {
+    color: #119a28;
+}
+
+.container .tw span i {
+    color: #46c1f6;
+}
+
+.container .yt span i {
+    color: #ff0000;
+}
+
+.container .fb span i {
+    color: #385999;
+}
+
+.container .in span i {
+    color: #e1306c;
+}
+
+.container .gh span i {
+    color: #333;
+}
